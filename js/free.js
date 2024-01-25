@@ -1,8 +1,8 @@
 "use strict";
 
-import "./packages/guiAssets.js"
-import "./packages/antiTamper.js"
-import "./packages/iModal.js"
+import "https://raw.githubusercontent.com/Rupicc/devhacks-reborn/main/js/pacakages/guiAssets.js"
+import "https://raw.githubusercontent.com/Rupicc/devhacks-reborn/main/js/pacakages/antiTamper.js"
+import "https://raw.githubusercontent.com/Rupicc/devhacks-reborn/main/js/pacakages/iModal.js"
 
 // Anti-Logger
 const originalXhr = window.XMLHttpRequest;
@@ -12,7 +12,7 @@ window.XMLHttpRequest = function () {
   xhr.open = function (method, url) {
     if (method === "POST" && url.includes("logger")) {
       showToast(
-        "DevHaxx has detected a silent log. This would mean your account is banned but DevHaxx has prevented this. Stay safe!",
+        "(NotFound) has detected a silent log. This would mean your account is banned but DevHaxx has prevented this. Stay safe!",
         "orange"
       );
       return;
@@ -26,7 +26,7 @@ const originalFetch = window.fetch;
 window.fetch = function (url, options) {
   if (url.includes("logger") || JSON.stringify(options).includes("logger")) {
     showToast(
-      "DevHaxx has detected a silent log. This would mean your account is banned but DevHaxx has prevented this. Stay safe!",
+      "Ruplicx has detected a silent log. This would mean your account is banned but DevHaxx has prevented this. Stay safe!",
       "orange"
     );
     return Promise.reject(new Error("DevHaxx AntiLog"));
@@ -42,14 +42,14 @@ document.addEventListener('contextmenu', function (e) {
 var copyrightDiv = document.createElement("div");
 copyrightDiv.style.cssText =
   "position: fixed; bottom: 10px; width: 100%; color: white; font-size: 12px; text-align: center;";
-copyrightDiv.textContent = "Copyright © DevTech 2023 All Rights Reserved";
+copyrightDiv.textContent = "Copyright © Ruplicx 2024-5 All Rights Reserved";
 document.body.appendChild(copyrightDiv);
 
 //modal
 iModal.showModal({
   "useInnerHTML": true,
-  "title" : "DevHaxx",
-  "description" : "DevHaxx Created by discord.gg/haxx | devhaxx.xyz",
+  "title" : "Ruplicx",
+  "description" : "Ruplicx Created by discord.gg/haxx | Ruplicx.LOL",
   "width" : "610px",
   "callback" : iModal.closeModal,
 });
@@ -59,7 +59,7 @@ if (
   document.getElementsByClassName("css-1lvadjd-Typography-Username e15psnz0")[0]
 ) {
   showToast(
-    "Welcome back to DevHaxx, " +
+    "Welcome back to Ruplicx, " +
       document.getElementsByClassName(
         "css-1lvadjd-Typography-Username e15psnz0"
       )[0].outerText +
@@ -77,7 +77,7 @@ UI.innerHTML = `<div id="devhaxx" style="position: absolute; top: 158px; left: 1
     <div class="devhaxxheader" style="
     font-weight: bold; text-align: center; font-size: 45px; cursor: move; background: linear-gradient(to left, rgba(128, 128, 128), rgb(128, 0, 128)); color: transparent; font-family: 'Roboto', sans-serif; font-weight: 500; 
         -webkit-background-clip: text; line-height:80px; margin-top:-25px; text-align: center;">
-      HAXX
+      Ruplicx
     </div>
 
     <div style="font-weight: bold; font-size: 10px; background: text-align: left;color: white">
