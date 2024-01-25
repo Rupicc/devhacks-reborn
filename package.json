@@ -1,0 +1,13 @@
+{
+  "name": "devhaxx-bundler",
+  "description": "Bundles DevHaxx into one JS file",
+  "type": "module",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
